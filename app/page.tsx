@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { SECTIONS_META, EMERGENCY_CONTACTS } from "./data/sections";
+import FlightBoard from "./components/FlightBoard";
 
 // ─── Sidebar (desktop) ─────────────────────────────────
 function Sidebar({
@@ -598,6 +599,8 @@ function FlightsSection() {
           </p>
         </div>
       </InfoCard>
+
+      <FlightBoard />
     </section>
   );
 }
