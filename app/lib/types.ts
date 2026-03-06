@@ -1,3 +1,10 @@
+export interface NewsArticle {
+  title: string;
+  link: string;
+  pubDate: string;
+  source: string;
+}
+
 export interface Flight {
   flight_iata: string;
   airline_iata: string;
