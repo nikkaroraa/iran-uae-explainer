@@ -8,17 +8,17 @@
 
 ## Why I built this
 
-I live in Dubai. When the US-Israeli strikes on Iran started and debris began falling over the UAE, the information was scattered — across Twitter threads, WhatsApp forwards, and news sites with conflicting updates. I wanted one place that had everything: what's happening, what to do, and who to call.
+I live in Dubai. When the US-Israeli strikes on Iran started and debris began falling over the UAE, the information was scattered - across Twitter threads, WhatsApp forwards, and news sites with conflicting updates. I wanted one place that had everything: what's happening, what to do, and who to call.
 
 So I built this over a weekend. A simple, fast crisis explainer for anyone living in the Gulf who just wants clear answers.
 
 ## What it covers
 
-**Situation** — Live updates, attack timeline, casualty tracking, Iran's position, UAE's response, and the background context that led here.
+**Situation** - Live updates, attack timeline, casualty tracking, Iran's position, UAE's response, and the background context that led here.
 
-**Practical** — Flight status (DXB/AUH), shelter locations, supply checklists, evacuation routes, and what to expect with markets and oil prices.
+**Practical** - Flight status (DXB/AUH), shelter locations, supply checklists, evacuation routes, and what to expect with markets and oil prices.
 
-**Resources** — Emergency numbers (police, ambulance, civil defense), embassy contacts for multiple nationalities, and official information sources.
+**Resources** - Emergency numbers (police, ambulance, civil defense), embassy contacts for multiple nationalities, and official information sources.
 
 ## Stack
 
