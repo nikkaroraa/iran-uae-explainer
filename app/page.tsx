@@ -120,19 +120,21 @@ function OverviewSection() {
       <InfoCard>
         <div className="space-y-4">
           <div className="flex flex-wrap gap-2">
-            <StatusBadge status="red" label="Day 9 — Active War" />
-            <StatusBadge status="red" label="Shelter Alerts Active" />
+            <StatusBadge status="red" label="Day 10 — Active War" />
+            <StatusBadge status="red" label="Oil Past $100" />
             <StatusBadge status="red" label="Hormuz Shutdown" />
-            <StatusBadge status="yellow" label="Limited Flights Operating" />
+            <StatusBadge status="red" label="Qatar Attacked" />
+            <StatusBadge status="yellow" label="11,000+ Flights Canceled" />
           </div>
           <p className="text-[var(--muted)] leading-relaxed">
-            Day 9 of the US-Israel war on Iran. Israel struck Tehran oil depots overnight,
-            causing blackened rain over the capital. Iran continues retaliatory strikes
-            across the Gulf — three shelter alerts sounded in Abu Dhabi this morning
-            (Mar 8). Iran&apos;s new supreme leader has been chosen but not yet named.
-            Iranian President Pezeshkian briefly apologized for Gulf strikes before
-            backtracking under hardliner pressure, signaling possible divisions in Tehran.
-            Oil surged 35% this week — biggest weekly gain since 1983.
+            Day 10 of the US-Israel war on Iran. Mojtaba Khamenei — son of the slain
+            supreme leader — has been named Iran&apos;s new supreme leader. Trump called the
+            choice &ldquo;a big mistake.&rdquo; Oil soared past $100/barrel for the first time,
+            hitting $119.50 intraday before settling around $114 — CNN calls it the
+            &ldquo;biggest oil disruption in history.&rdquo; Qatar was struck by 17 ballistic
+            missiles and 6 drones. Seven US soldiers have been killed. UAE envoy to the UN
+            says UAE &ldquo;will not partake in any attacks on Iran.&rdquo; Iran rules out
+            immediate ceasefire. Over 11,000 flights canceled across the Middle East.
           </p>
           <div className="grid grid-cols-2 gap-3 mt-4">
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
@@ -141,17 +143,17 @@ function OverviewSection() {
             </div>
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]">Status</p>
-              <p className="text-sm font-semibold text-red-400">Day 9 — Escalating</p>
+              <p className="text-sm font-semibold text-red-400">Day 10 — Escalating</p>
             </div>
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]"><TopicLink slug="ceasefire">Ceasefire</TopicLink></p>
               <p className="text-sm font-semibold text-red-400">
-                None — Iran FM says &ldquo;not asking for ceasefire&rdquo;
+                None — Iran rules out immediate ceasefire
               </p>
             </div>
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]">US Involvement</p>
-              <p className="text-sm font-semibold">Active — Operation Epic Fury</p>
+              <p className="text-sm font-semibold">Active — 7 US soldiers killed</p>
             </div>
           </div>
         </div>
@@ -168,6 +170,15 @@ function AttacksSection() {
       </h2>
       <div className="space-y-3">
         {[
+          {
+            date: "Mar 9",
+            event: (
+              <>
+                Day 10: Mojtaba Khamenei named Iran&apos;s new supreme leader — Trump calls it &ldquo;a big mistake.&rdquo; Oil soars past $100, hits $119.50 intraday. Qatar struck by 17 <TopicLink slug="ballistic-missiles">ballistic missiles</TopicLink> and 6 drones. 7 US soldiers killed total. IDF launches &ldquo;extensive&rdquo; airstrikes in three areas of Iran. 2 UAE Armed Forces killed in helicopter crash (technical malfunction). UAE envoy tells UN: &ldquo;will not partake in any attacks on Iran.&rdquo; Iran rules out immediate ceasefire. 11,000+ flights canceled across Middle East.
+              </>
+            ),
+            severity: "red" as const,
+          },
           {
             date: "Mar 8",
             event: (
@@ -208,7 +219,7 @@ function AttacksSection() {
             date: "Feb 28",
             event: (
               <>
-                US-Israel launch Operation Epic Fury — coordinated strikes on Iran kill Supreme Leader Khamenei. Iran retaliates across Gulf. UAE activates <TopicLink slug="ncema">NCEMA</TopicLink> emergency protocols. 189 ballistic missiles, 941 drones, 3 cruise missiles fired at UAE by Mar 4.
+                US-Israel launch Operation Epic Fury — coordinated strikes on Iran kill Supreme Leader Khamenei. Iran retaliates across Gulf. UAE activates <TopicLink slug="ncema">NCEMA</TopicLink> emergency protocols. 233 ballistic missiles, 1,359 drones intercepted by UAE total.
               </>
             ),
             severity: "red" as const,
@@ -246,21 +257,25 @@ function IranSection() {
       <InfoCard>
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-[var(--muted)]">
-            Iran continues retaliatory strikes across the Gulf despite losing Supreme
-            Leader Khamenei. FM Araghchi says Iran is &ldquo;not asking for ceasefire
-            or negotiations.&rdquo; However, President Pezeshkian briefly apologized
-            for Gulf strikes before hardliners forced him to retract — signaling
-            possible divisions within Tehran&apos;s leadership. A new supreme leader
-            has been chosen but not yet named.
+            Mojtaba Khamenei — son of the slain supreme leader — has been named
+            Iran&apos;s new supreme leader. Iran rules out immediate ceasefire
+            despite massive losses. Trump called the succession &ldquo;a big
+            mistake.&rdquo; Iran has now attacked Qatar as well as UAE, Bahrain,
+            and Kuwait — expanding its Gulf retaliation. IDF launched &ldquo;extensive&rdquo;
+            airstrikes in three areas of Iran overnight.
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
-              <span>189 ballistic missiles, 941 drones, 3 cruise missiles fired at UAE (by Mar 4)</span>
+              <span>Mojtaba Khamenei named new supreme leader — Israel vows to target him</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
-              <span>New supreme leader chosen — Israel vows to target successor</span>
+              <span>233 ballistic missiles, 1,359 drones fired at UAE (total intercepted)</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-red-400">•</span>
+              <span>Qatar struck by 17 ballistic missiles and 6 drones — war spreading</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
@@ -268,9 +283,7 @@ function IranSection() {
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
-              <span>
-                Hezbollah resumed attacks on Israel; Houthis striking Saudi Arabia
-              </span>
+              <span>Iran rules out immediate ceasefire — 1,200+ killed in Iran from strikes</span>
             </li>
             <li className="flex gap-2">
               <span className="text-yellow-400">•</span>
@@ -294,35 +307,33 @@ function UAESection() {
       <InfoCard>
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-[var(--muted)]">
-            UAE President says country is &ldquo;prepared to confront threats.&rdquo;
-            Air defenses continue intercepting 95%+ of incoming missiles and drones,
-            but debris is causing civilian casualties. The US State Department has
-            ordered non-emergency staff to leave and is operating evacuation flights
-            from Abu Dhabi and Dubai. Three shelter alerts sounded in Abu Dhabi on
-            Mar 8 morning.
+            UAE envoy to the UN declared UAE &ldquo;will not partake in any attacks
+            on Iran&rdquo; — distancing from the US-Israeli offensive. Two UAE Armed
+            Forces members killed in a helicopter crash due to technical malfunction.
+            Air defenses have intercepted 233 ballistic missiles and 1,359 drones total.
+            US ordered staff to leave Saudi Arabia as conflict spreads. Over 11,000
+            flights canceled across the Middle East.
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex gap-2">
               <span className="text-green-400">•</span>
-              <span><TopicLink slug="thaad">THAAD</TopicLink> and <TopicLink slug="patriot">Patriot</TopicLink> intercepting 95%+ of incoming threats</span>
+              <span><TopicLink slug="thaad">THAAD</TopicLink> and <TopicLink slug="patriot">Patriot</TopicLink> intercepting 95%+ — 233 missiles, 1,359 drones stopped</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
-              <span>4 killed, 112 injured (all from interception debris — not direct hits)</span>
+              <span>4 civilians killed, 112 injured (debris) + 2 military killed (helicopter crash)</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-blue-400">•</span>
+              <span>UAE envoy to UN: &ldquo;will not partake in any attacks on Iran&rdquo;</span>
             </li>
             <li className="flex gap-2">
               <span className="text-yellow-400">•</span>
-              <span>US ordering non-emergency staff out, running evacuation flights</span>
+              <span>US ordered staff to leave Saudi Arabia — evacuations ongoing from UAE</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-yellow-400">•</span>
-              <span>
-                Considering freezing billions in Iranian assets held in UAE
-              </span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-green-400">•</span>
-              <span>Emirates aiming for 100% capacity &ldquo;in coming days&rdquo; — limited flights operating</span>
+              <span className="text-red-400">•</span>
+              <span>11,000+ flights canceled across Middle East</span>
             </li>
           </ul>
         </div>
@@ -340,11 +351,11 @@ function CasualtiesSection() {
       <InfoCard>
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-red-500/10 rounded-lg p-4 text-center">
-            <p className="text-2xl font-bold text-red-400">4</p>
+            <p className="text-2xl font-bold text-red-400">6</p>
             <p className="text-xs text-[var(--muted)] mt-1">
               Killed in UAE
             </p>
-            <p className="text-[10px] text-[var(--muted)]">Foreign nationals — debris/shrapnel</p>
+            <p className="text-[10px] text-[var(--muted)]">4 civilians (debris) + 2 military (helicopter)</p>
           </div>
           <div className="bg-yellow-500/10 rounded-lg p-4 text-center">
             <p className="text-2xl font-bold text-yellow-400">112+</p>
@@ -352,24 +363,24 @@ function CasualtiesSection() {
             <p className="text-[10px] text-[var(--muted)]">All from interception debris</p>
           </div>
           <div className="bg-red-500/10 rounded-lg p-4 text-center">
-            <p className="text-2xl font-bold text-red-400">1,332+</p>
+            <p className="text-2xl font-bold text-red-400">1,200+</p>
             <p className="text-xs text-[var(--muted)] mt-1">
               Killed in Iran
             </p>
             <p className="text-[10px] text-[var(--muted)]">From US-Israeli strikes</p>
           </div>
-          <div className="bg-blue-500/10 rounded-lg p-4 text-center">
-            <p className="text-2xl font-bold text-blue-400">95%+</p>
+          <div className="bg-red-500/10 rounded-lg p-4 text-center">
+            <p className="text-2xl font-bold text-red-400">7</p>
             <p className="text-xs text-[var(--muted)] mt-1">
-              Intercepted by UAE
+              US Soldiers Killed
             </p>
-            <p className="text-[10px] text-[var(--muted)]">No direct missile impacts on UAE</p>
+            <p className="text-[10px] text-[var(--muted)]">In Operation Epic Fury</p>
           </div>
         </div>
         <p className="text-xs text-[var(--muted)] mt-4">
-          ⚠️ UAE figures from UAE Defence Ministry (Mar 8). Iran figures from Al Jazeera tracker.
-          No UAE casualties from direct missile impacts — all from interception debris/shrapnel.
-          Lebanon: 123 killed, 600+ wounded from resumed Israeli strikes.
+          ⚠️ UAE figures from UAE Defence Ministry (Mar 9). Iran figures from Al Jazeera tracker.
+          233 ballistic missiles and 1,359 drones intercepted by UAE total.
+          Lebanon: 400+ killed. Israel: 11 killed. Qatar also struck (17 missiles, 6 drones).
         </p>
       </InfoCard>
     </section>
@@ -402,10 +413,10 @@ function HistorySection() {
           </p>
           <p>
             The <TopicLink slug="strait-of-hormuz">Strait of Hormuz</TopicLink> has
-            effectively shut down — traffic near zero. <TopicLink slug="oil-markets">Oil</TopicLink> hit
-            $92.69/barrel (+35% in one week, biggest gain since 1983). Maersk, CMA CGM,
-            and Hapag-Lloyd have all suspended Gulf transits. 20% of global oil supply
-            is disrupted.
+            effectively shut down — traffic near zero. <TopicLink slug="oil-markets">Oil</TopicLink> soared
+            past $100 to hit $119.50/barrel intraday — CNN calls it the &ldquo;biggest oil
+            disruption in history.&rdquo; Maersk, CMA CGM, and Hapag-Lloyd have all
+            suspended Gulf transits. 20% of global oil supply is disrupted.
           </p>
         </div>
         <div className="mt-4">
@@ -430,12 +441,19 @@ function FlightsSection() {
       <InfoCard>
         <div className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
+              <p className="text-xs text-red-400 font-semibold uppercase">
+                Middle East Total
+              </p>
+              <p className="text-sm font-bold mt-1">11,000+ flights canceled</p>
+              <p className="text-xs text-[var(--muted)]">Across all Middle Eastern airports</p>
+            </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
               <p className="text-xs text-yellow-400 font-semibold uppercase">
                 Emirates (DXB)
               </p>
               <p className="text-sm font-bold mt-1">Limited schedule</p>
-              <p className="text-xs text-[var(--muted)]">Aiming for 100% capacity &ldquo;in coming days&rdquo;</p>
+              <p className="text-xs text-[var(--muted)]">Select routes only • Subject to alerts</p>
             </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
               <p className="text-xs text-yellow-400 font-semibold uppercase">
@@ -443,13 +461,6 @@ function FlightsSection() {
               </p>
               <p className="text-sm font-bold mt-1">Limited resumption</p>
               <p className="text-xs text-[var(--muted)]">Key routes operating • Subject to airspace</p>
-            </div>
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
-              <p className="text-xs text-yellow-400 font-semibold uppercase">
-                Flydubai
-              </p>
-              <p className="text-sm font-bold mt-1">Partial schedule</p>
-              <p className="text-xs text-[var(--muted)]">Several routes resumed from Mar 5</p>
             </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
               <p className="text-xs text-yellow-400 font-semibold uppercase">
@@ -508,16 +519,16 @@ function MarketsSection() {
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-red-500/10 rounded-lg p-3">
-              <p className="text-xs text-[var(--muted)]">Stock Exchanges</p>
-              <p className="text-sm font-bold text-red-400">Reopened — Sell-off</p>
-              <p className="text-xs text-[var(--muted)]">
-                Massive losses after 2-day closure
-              </p>
+              <p className="text-xs text-[var(--muted)]"><TopicLink slug="oil-markets">Oil</TopicLink> (Brent)</p>
+              <p className="text-sm font-bold text-red-400">~$114 (hit $119.50)</p>
+              <p className="text-xs text-[var(--muted)]">Past $100 — biggest disruption in history</p>
             </div>
             <div className="bg-red-500/10 rounded-lg p-3">
-              <p className="text-xs text-[var(--muted)]"><TopicLink slug="oil-markets">Oil</TopicLink> (Brent)</p>
-              <p className="text-sm font-bold text-red-400">$92.69</p>
-              <p className="text-xs text-[var(--muted)]">+35% this week — record gain since 1983</p>
+              <p className="text-xs text-[var(--muted)]">Stock Exchanges</p>
+              <p className="text-sm font-bold text-red-400">Massive Sell-off</p>
+              <p className="text-xs text-[var(--muted)]">
+                Global markets in turmoil
+              </p>
             </div>
             <div className="bg-red-500/10 rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]"><TopicLink slug="strait-of-hormuz">Strait of Hormuz</TopicLink></p>
@@ -992,7 +1003,7 @@ export default function Home() {
           <div className="flex items-center gap-2 mb-4">
             <StatusBadge status="red" label="Live Updates" />
             <span className="text-xs text-[var(--muted)]">
-              Mar 8, 2026 • 14:00 GMT+4
+              Mar 9, 2026 • 14:00 GMT+4
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
@@ -1071,7 +1082,7 @@ export default function Home() {
             UAE government guidance.
           </p>
           <p>
-            Last updated: March 8, 2026, 14:00 GMT+4
+            Last updated: March 9, 2026, 14:00 GMT+4
           </p>
           <p>
             Built with care for UAE residents. Stay safe. 🤍

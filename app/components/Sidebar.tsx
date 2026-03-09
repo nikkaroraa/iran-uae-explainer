@@ -106,7 +106,7 @@ export default function Sidebar({
 
       <div className="mt-auto pt-4 px-2">
         <p className="text-[10px] text-[var(--muted)]">
-          Last updated: Mar 8, 2026
+          Last updated: Mar 9, 2026
           <br />
           14:00 GMT+4
         </p>
