@@ -81,6 +81,13 @@ export const SECTIONS_META = [
     category: "situation" as const,
     shortTitle: "History",
   },
+  {
+    id: "outlook",
+    title: "Where Is This Heading?",
+    emoji: "🔮",
+    category: "situation" as const,
+    shortTitle: "Outlook",
+  },
   // Practical sections
   {
     id: "flights",
