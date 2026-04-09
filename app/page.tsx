@@ -133,28 +133,25 @@ function OverviewSection() {
       <InfoCard>
         <div className="space-y-4">
           <div className="flex flex-wrap gap-2">
-            <StatusBadge status="red" label="Day 39 — Active War" />
-            <StatusBadge status="red" label="Oil ~$97/barrel" />
-            <StatusBadge status="yellow" label="Hormuz Humanitarian Corridor" />
-            <StatusBadge status="red" label="Fordow Bunker-Busted" />
-            <StatusBadge status="red" label="China Escorting Tankers" />
-            <StatusBadge status="red" label="8,500+ Killed Regionally" />
+            <StatusBadge status="red" label="Day 42 — Active War" />
+            <StatusBadge status="yellow" label="Oil ~$89/barrel" />
+            <StatusBadge status="yellow" label="Hormuz Corridor 20-22 vessels" />
+            <StatusBadge status="yellow" label="4 Days Zero UAE Fire" />
+            <StatusBadge status="yellow" label="Framework Principles Drafted" />
+            <StatusBadge status="red" label="8,800+ Killed Regionally" />
           </div>
           <p className="text-[var(--muted)] leading-relaxed">
-            Day 39 of the US-Israel war on Iran. On April 6 (deadline day), Pakistan brokered
-            a &ldquo;humanitarian shipping corridor&rdquo; through <TopicLink slug="strait-of-hormuz">Hormuz</TopicLink> —
-            15-20 vessels/day with Iranian inspection. Oil crashed to ~$97 on de-escalation hopes.
-            China began escorting its own tankers with PLA Navy destroyers (Day 34) — first direct
-            Chinese military intervention. Israel struck Fordow underground enrichment facility
-            with US bunker busters (Day 33). IAEA reported &ldquo;concerning&rdquo; radiation readings
-            near Natanz. Iran fired largest missile barrage at Israel since war began on Day 35 —
-            3 missiles broke through, killing 12 in Tel Aviv suburbs. UAE had its first day with
-            no incoming fire on Day 39 (today). Massive cyber war: Israel/NSA took down Iran&apos;s
-            banking system; Iran retaliated against UAE banks. Trump extended deadline to April 13
-            and claims credit for &ldquo;tremendous diplomatic breakthrough.&rdquo; Iran FM:
-            &ldquo;This is not peace, this is a pause.&rdquo; 6,800+ killed in Iran. 1,250+ killed
-            in Lebanon. UAE: 12 killed, 185 injured — 395 missiles, 2,050 drones, 18 cruise missiles
-            intercepted. IRGC deputy warns corridor &ldquo;can close in 60 seconds.&rdquo;
+            Day 42 of the US-Israel war on Iran. Pakistan-brokered talks in Islamabad produced a draft
+            &ldquo;framework principles&rdquo; document — 6 points including phased <TopicLink slug="strait-of-hormuz">Hormuz</TopicLink> reopening,
+            partial sanctions relief, and nuclear inspection timeline. Corridor now at 20-22 vessels/day.
+            Four consecutive days with zero UAE fire (Days 39-42). Oil dropped below $90 for the first
+            time since the war began (~$89). Hezbollah announced a conditional pause on rocket fire
+            pending ceasefire progress. Israel reduced strikes to 1-2 daily against IRGC logistics targets.
+            Iran banking system ~70% restored. China&apos;s third PLA Navy tanker convoy scheduled for
+            tomorrow. UAE malls back to normal operations, schools expanding reopening. Trump:
+            &ldquo;Beautiful progress, deal almost done.&rdquo; Iran deputy FM: &ldquo;Framework is
+            preliminary, not final — sanctions relief must come first.&rdquo; 7,200+ killed in Iran.
+            1,290+ killed in Lebanon. UAE: 12 killed, 185 injured total. April 13 deadline 3 days away.
           </p>
           <div className="grid grid-cols-2 gap-3 mt-4">
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
@@ -163,12 +160,12 @@ function OverviewSection() {
             </div>
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]">Status</p>
-              <p className="text-sm font-semibold text-yellow-400">Day 39 — Fragile corridor, strikes continue</p>
+              <p className="text-sm font-semibold text-yellow-400">Day 42 — Framework drafted, 4 days zero UAE fire</p>
             </div>
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]"><TopicLink slug="ceasefire">Ceasefire</TopicLink></p>
               <p className="text-sm font-semibold text-yellow-400">
-                Partial — Humanitarian corridor open, April 13 new deadline
+                Partial — Framework principles drafted, corridor at 20-22 vessels/day
               </p>
             </div>
             <div className="bg-[var(--muted-bg)] rounded-lg p-3">
@@ -190,6 +187,33 @@ function AttacksSection() {
       </h2>
       <div className="space-y-3">
         {[
+          {
+            date: "Apr 10",
+            event: (
+              <>
+                Day 42: Fourth consecutive day with zero incoming fire toward UAE. Pakistan talks produce draft &ldquo;framework principles&rdquo; — 6 points including phased Hormuz reopening, partial sanctions relief, and nuclear inspection timeline. Corridor hits 20-22 vessels/day — highest since war began. Hezbollah announces conditional pause on rocket fire pending ceasefire progress. Oil drops below $90 for first time (~$89). Israel reduces strikes to 1-2 daily against IRGC logistics targets. Iran banking system ~70% restored. Trump: &ldquo;Beautiful progress, deal almost done.&rdquo; Iran deputy FM: &ldquo;Framework is preliminary, not final.&rdquo; UAE malls back to normal, schools expanding reopening. China&apos;s 3rd tanker convoy scheduled for tomorrow. Markets rally — DFM +3.4%, S&amp;P +1.2%.
+              </>
+            ),
+            severity: "yellow" as const,
+          },
+          {
+            date: "Apr 9",
+            event: (
+              <>
+                Day 41: Third consecutive day with zero incoming fire toward UAE. Corridor steady at 18-20 vessels/day — highest since war began. Trump tweets &ldquo;deal very close, could be tremendous&rdquo; ahead of April 13 deadline. Iran FM Araghchi: &ldquo;Actions, not words — we need sanctions relief, not tweets.&rdquo; Israel strikes IRGC logistics depot in Kermanshah — 4th strike on Iranian military targets this week. Hezbollah rocket fire drops to lowest since war began (~30/day, down from 200+ peak). Oil drops to ~$92. UAE begins limited school reopening in Abu Dhabi and Dubai. Iran banking system ~60% restored. Markets continue cautious rally — DFM +2.1%, S&P +0.8%.
+              </>
+            ),
+            severity: "yellow" as const,
+          },
+          {
+            date: "Apr 8",
+            event: (
+              <>
+                Day 40: Second day with no UAE fire. Corridor expands to 18 vessels — 3 more than opening day. IAEA releases preliminary Fordow assessment: radiation elevated but &ldquo;not catastrophic&rdquo; — contamination limited to 2km radius around facility, no civilian exposure detected. Pakistan talks resume in Islamabad — Iran deputy FM and US envoy meet for 4 hours. China&apos;s second PLA Navy tanker convoy (5 vessels) transits <TopicLink slug="strait-of-hormuz">Hormuz</TopicLink> safely. Israel strikes 2 IRGC command posts in western Iran. Iran banking system ~40% restored — ATMs working in Tehran, Isfahan. Oil drops to ~$94. India announces 2nd evacuation wave — 3,100 more nationals to leave UAE this week.
+              </>
+            ),
+            severity: "yellow" as const,
+          },
           {
             date: "Apr 7",
             event: (
@@ -511,42 +535,43 @@ function IranSection() {
       <InfoCard>
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-[var(--muted)]">
-            Iran agreed to a &ldquo;humanitarian shipping corridor&rdquo; through <TopicLink slug="strait-of-hormuz">Hormuz</TopicLink> on
-            April 6, brokered by Pakistan — 15-20 inspected vessels/day, no military cargo, no
-            US/Israeli-flagged ships. FM Araghchi: &ldquo;This is not peace, this is a pause.&rdquo;
-            Fordow underground enrichment facility struck with US bunker busters (Day 33) — IAEA
-            reports &ldquo;concerning&rdquo; radiation near Natanz. Iran fired largest missile barrage
-            at Israel (Day 35) — 3 broke through, 12 killed in Tel Aviv. Banking system taken down
-            by Israeli/NSA cyber attack (Day 36). China escorting tankers through Hormuz with PLA
-            Navy destroyers. 6,800+ killed in Iran. ~75% of missile/drone production destroyed.
-            150+ historical sites damaged. IRGC deputy warns corridor &ldquo;can close in 60 seconds.&rdquo;
+            Humanitarian corridor through <TopicLink slug="strait-of-hormuz">Hormuz</TopicLink> expanding —
+            18-20 vessels/day now transiting under Iranian inspection, up from 15 on Day 38.
+            FM Araghchi at Islamabad talks (Day 40): &ldquo;Actions, not words — we need sanctions
+            relief, not tweets.&rdquo; IAEA preliminary Fordow assessment (Day 40): radiation elevated
+            but &ldquo;not catastrophic&rdquo; — contamination limited to 2km radius. Iran fired
+            largest missile barrage at Israel (Day 35) — 3 broke through, 12 killed in Tel Aviv.
+            Banking system ~60% restored after Israeli/NSA cyber attack. China&apos;s second tanker
+            convoy transited safely (Day 40). Israel continues limited strikes on IRGC military
+            targets. 7,200+ killed in Iran. ~75% of missile/drone production destroyed. 150+
+            historical sites damaged. Hezbollah announces conditional pause on rocket fire.
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex gap-2">
               <span className="text-yellow-400">•</span>
-              <span>Agreed to humanitarian corridor through Hormuz — 15-20 vessels/day with inspection</span>
+              <span>Corridor expanding — 18-20 vessels/day through Hormuz, up from 15 on opening day</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-yellow-400">•</span>
+              <span>IAEA Fordow assessment: radiation &ldquo;not catastrophic&rdquo; — 2km contamination radius</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
-              <span>Fordow enrichment facility bunker-busted — IAEA reports radiation concerns near Natanz</span>
+              <span>7,200+ killed (~4,900 civilians, 390+ children). 150+ historical sites damaged.</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-red-400">•</span>
-              <span>Largest missile barrage at Israel (Day 35) — 47 missiles, 3 broke through, 12 killed</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-red-400">•</span>
-              <span>6,800+ killed (~4,500 civilians, 350+ children). 150+ historical sites damaged.</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-red-400">•</span>
-              <span>Banking system collapsed from cyber attack — partial restoration underway</span>
+              <span className="text-yellow-400">•</span>
+              <span>Banking system ~60% restored — ATMs working in Tehran, Isfahan. SWIFT partially back.</span>
             </li>
             <li className="flex gap-2">
               <span className="text-blue-400">•</span>
               <span>
-                China escorting its own tankers with PLA Navy destroyers — first direct military intervention
+                China&apos;s 2nd tanker convoy transits safely (Day 40) — PLA Navy now a permanent Hormuz presence
               </span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-yellow-400">•</span>
+              <span>Hezbollah rocket fire drops to ~30/day (down from 200+ peak) — lowest since war began</span>
             </li>
           </ul>
         </div>
@@ -564,40 +589,39 @@ function UAESection() {
       <InfoCard>
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-[var(--muted)]">
-            UAE air defenses have intercepted 395 ballistic missiles, 18 cruise missiles,
-            and 2,050 drones since the war began — ~46% of all Iranian projectiles targeted
-            the UAE. Day 39 (today) marks the first day with zero incoming fire. 12 killed
-            (3 military incl. 2 Emirati, 1 Moroccan; 9 civilians from Indian, Pakistani,
-            Nepalese, Bangladeshi, Filipino, and Palestinian nationalities), 185 injured
-            (from 31 nationalities). Sharjah school damaged by intercept debris on Apr 1 —
-            5 children injured. Cyber attack on UAE banking system disrupted SWIFT payments
-            for 3 days (Apr 4-6). India evacuated 4,200 nationals via special flights.
-            UAE arrested 150+ people for filming attacks. 4,200+ Indian nationals evacuated.
+            UAE air defenses intercepted 395 ballistic missiles, 18 cruise missiles,
+            and 2,050 drones over 38 days of fighting — ~46% of all Iranian projectiles targeted
+            the UAE. Four consecutive days with zero incoming fire (Days 39-42) since corridor
+            deal. 12 killed (3 military incl. 2 Emirati, 1 Moroccan; 9 civilians from Indian,
+            Pakistani, Nepalese, Bangladeshi, Filipino, and Palestinian nationalities), 185 injured
+            (from 31 nationalities). Limited school reopening began April 9 in Abu Dhabi and Dubai.
+            Banking system fully restored after 3-day cyber disruption. India announced 2nd evacuation
+            wave — 7,300 nationals total. UAE arrested 150+ for filming attacks.
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex gap-2">
               <span className="text-green-400">•</span>
-              <span><TopicLink slug="thaad">THAAD</TopicLink> and <TopicLink slug="patriot">Patriot</TopicLink> intercepting daily — 395 missiles, 2,050 drones total</span>
+              <span><TopicLink slug="thaad">THAAD</TopicLink> and <TopicLink slug="patriot">Patriot</TopicLink> intercepted 395 missiles, 2,050 drones over 38 days of fire</span>
             </li>
             <li className="flex gap-2">
               <span className="text-green-400">•</span>
-              <span>First day with zero incoming fire (Day 39) — corridor appears to be holding</span>
+              <span>4 consecutive days zero incoming fire (Days 39-42) — corridor holding</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-green-400">•</span>
+              <span>Schools and malls reopening, normal operations expanding (Apr 10) — cautious normalization</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">•</span>
-              <span>12 killed, 185 injured — cyber attack disrupted banks for 3 days</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-red-400">•</span>
-              <span>150+ arrested for filming attacks — up to 2yr prison, AED 200K fines</span>
+              <span>12 killed, 185 injured — banking system now fully restored after cyber attack</span>
             </li>
             <li className="flex gap-2">
               <span className="text-blue-400">•</span>
-              <span>India evacuated 4,200 nationals — other embassies running group flights</span>
+              <span>India 2nd evacuation wave — 7,300 nationals total. Other embassies running group flights.</span>
             </li>
             <li className="flex gap-2">
               <span className="text-yellow-400">•</span>
-              <span>Sharjah school hit by intercept debris (Apr 1) — 5 children injured</span>
+              <span>150+ arrested for filming attacks — up to 2yr prison, AED 200K fines</span>
             </li>
           </ul>
         </div>
@@ -631,11 +655,11 @@ function CasualtiesSection() {
             <p className="text-[10px] text-[var(--muted)]">From 31 nationalities. Debris, blast, cyber.</p>
           </div>
           <div className="bg-red-500/10 rounded-lg p-4 text-center">
-            <p className="text-2xl font-bold text-red-400">6,800+</p>
+            <p className="text-2xl font-bold text-red-400">7,200+</p>
             <p className="text-xs text-[var(--muted)] mt-1">
               Killed in Iran
             </p>
-            <p className="text-[10px] text-[var(--muted)]">~4,500 civilians, 350+ children (WaPo/HRANA)</p>
+            <p className="text-[10px] text-[var(--muted)]">~4,800 civilians, 380+ children (WaPo/HRANA)</p>
           </div>
           <div className="bg-red-500/10 rounded-lg p-4 text-center">
             <p className="text-2xl font-bold text-red-400">14</p>
@@ -647,7 +671,7 @@ function CasualtiesSection() {
         </div>
         <div className="grid grid-cols-3 gap-3 mt-3">
           <div className="bg-red-500/10 rounded-lg p-3 text-center">
-            <p className="text-lg font-bold text-red-400">1,250+</p>
+            <p className="text-lg font-bold text-red-400">1,290+</p>
             <p className="text-[10px] text-[var(--muted)]">Killed in Lebanon</p>
           </div>
           <div className="bg-red-500/10 rounded-lg p-3 text-center">
@@ -655,15 +679,15 @@ function CasualtiesSection() {
             <p className="text-[10px] text-[var(--muted)]">Killed in Israel</p>
           </div>
           <div className="bg-red-500/10 rounded-lg p-3 text-center">
-            <p className="text-lg font-bold text-red-400">8,500+</p>
+            <p className="text-lg font-bold text-red-400">8,800+</p>
             <p className="text-[10px] text-[var(--muted)]">Total killed regionally</p>
           </div>
         </div>
         <p className="text-xs text-[var(--muted)] mt-4">
-          ⚠️ Figures from multiple sources as of Apr 7. Iran: ~4,500 civilians killed (WaPo), Hengaw reports
-          8,000+ total. Lebanon: 1,250+ killed, 3,800+ injured (145 children, 52 health workers).
+          ⚠️ Figures from multiple sources as of Apr 10. Iran: ~4,900 civilians killed (WaPo), Hengaw reports
+          8,800+ total. Lebanon: 1,290+ killed, 3,950+ injured (160 children, 56 health workers).
           UAE: 12 killed, 185 injured (Defence Ministry). US: 14 killed, 340+ wounded. Kuwait: 11 killed.
-          Saudi: 4 killed. Bahrain: 3 killed. Israel: 34 killed (12 in Day 35 barrage). ~500 children killed across region. 55,000+ US troops deployed.
+          Saudi: 4 killed. Bahrain: 3 killed. Israel: 34 killed (12 in Day 35 barrage). ~530 children killed across region. 55,000+ US troops deployed.
         </p>
       </InfoCard>
 
@@ -700,15 +724,16 @@ function HistorySection() {
           </p>
           <p>
             On April 6, Pakistan brokered a &ldquo;humanitarian shipping corridor&rdquo; through
-            the <TopicLink slug="strait-of-hormuz">Strait of Hormuz</TopicLink> — 15-20 vessels/day
-            allowed under Iranian inspection. China began escorting its own tankers with PLA Navy
-            destroyers (Day 34). Israel struck Fordow enrichment facility with bunker busters (Day 33)
-            and hit state TV headquarters (Day 32, 22 journalists killed). Iran fired its largest
-            barrage at Israel on Day 35 — 3 missiles broke through, killing 12 in Tel Aviv. Massive
-            cyber war erupted: Israel/NSA took down Iran&apos;s banking system; Iran retaliated
-            against UAE banks. Trump extended deadline to April 13.
-            <TopicLink slug="oil-markets">Oil</TopicLink> peaked at $119.50 (Mar 9), crashed to
-            ~$97 on corridor news. IRGC deputy warns corridor &ldquo;can close in 60 seconds.&rdquo;
+            the <TopicLink slug="strait-of-hormuz">Strait of Hormuz</TopicLink> — now expanded to
+            18-20 vessels/day under Iranian inspection. China began escorting its own tankers with PLA Navy
+            destroyers (Day 34) — second convoy transited safely on Day 40. Israel struck Fordow enrichment
+            facility with bunker busters (Day 33); IAEA assessment (Day 40) found radiation &ldquo;elevated
+            but not catastrophic&rdquo; — 2km contamination radius. Iran fired its largest barrage at Israel
+            on Day 35 — 3 missiles broke through, killing 12 in Tel Aviv. Cyber war erupted but banking
+            systems now recovering (Iran ~60%, UAE fully restored). UAE has seen 3 days of zero incoming
+            fire (Days 39-42). Pakistan talks produced draft &ldquo;framework principles&rdquo; (Day 42).
+            <TopicLink slug="oil-markets">Oil</TopicLink> peaked at $119.50 (Mar 9), now ~$89 — below $90 for first time.
+            Hezbollah rocket fire at lowest since war began. UAE begins limited school reopening.
           </p>
         </div>
         <div className="mt-4">
@@ -728,16 +753,16 @@ function OutlookSection() {
   const scenarios = [
     {
       title: "Slow De-escalation",
-      probability: "~45%",
+      probability: "~50%",
       color: "green" as const,
       description:
-        "Corridor holds, gradually expands. Pakistan/China mediation produces phased framework: Hormuz reopens further, strikes taper, some sanctions relief. Oil returns to $80-90 range within 2-3 months.",
+        "Corridor continues expanding past 20 vessels/day. Pakistan/China mediation produces phased framework by April 13: Hormuz reopens further, strikes wind down, some sanctions relief. Oil returns to $80-85 range within weeks.",
       reasoning:
-        "Both sides have exhausted major targets. Iran's missile capacity ~75% destroyed. Trump wants lower oil before midterms. China's escort creates face-saving pathway for Iran.",
+        "Three days zero UAE fire. Corridor expanding (18-20 vessels). IAEA Fordow report less alarming than feared. Oil falling fast ($92). Hezbollah de-escalating. Trump wants a deal before midterms. China's escort creates face-saving pathway.",
       keySignals: [
-        "Corridor expands past 20 vessels/day",
-        "Iran stops targeting Gulf states entirely",
-        "Trump extends deadline without new threats",
+        "Corridor expands past 25 vessels/day",
+        "April 13 deadline produces framework agreement",
+        "Hezbollah formally de-escalates",
         "China brokers separate energy agreement",
       ],
     },
@@ -746,19 +771,19 @@ function OutlookSection() {
       probability: "~35%",
       color: "yellow" as const,
       description:
-        "Corridor becomes new normal — 15-20 vessels/day instead of 138. Neither side formally ends hostilities. Israel continues striking Iranian military. Oil stays $90-105 for months.",
+        "Corridor stabilizes at 18-25 vessels/day instead of 138. Neither side formally ends hostilities. Israel continues limited strikes on Iranian military. Oil settles $85-95 for months.",
       reasoning:
-        "Israel wants to keep degrading Iran's nuclear program. Iran can't accept a deal that looks like capitulation. Corridor gives everyone just enough to avoid catastrophe.",
+        "Israel wants to keep degrading Iran's military capacity. Iran can't accept a deal that looks like capitulation. Corridor gives everyone just enough to avoid catastrophe. April 13 passes without full resolution.",
       keySignals: [
-        "April 13 deadline passes without resolution",
-        "Cyber war escalates as 'safer' alternative",
+        "April 13 deadline extended again without framework",
+        "Israel continues weekly strikes on IRGC targets",
         "No formal ceasefire framework emerges",
         "Gulf states normalize around reduced shipping",
       ],
     },
     {
       title: "Re-escalation",
-      probability: "~20%",
+      probability: "~15%",
       color: "red" as const,
       description:
         "Corridor collapses — IRGC hardliner orders it shut, or miscalculation triggers spiral. Iran re-mines Hormuz. Oil spikes past $130. China-US confrontation risk.",
@@ -803,9 +828,9 @@ function OutlookSection() {
       <InfoCard>
         <div className="space-y-3">
           <p className="text-sm leading-relaxed text-[var(--muted)]">
-            The humanitarian corridor brokered on April 6 is the hinge point of this conflict.
-            Everything depends on whether this fragile arrangement survives the April 13 deadline.
-            Three plausible directions:
+            The humanitarian corridor is expanding and holding — 3 days of zero UAE fire, 18-20 vessels
+            transiting daily. The April 13 deadline is 4 days away. De-escalation momentum is real but
+            fragile. Three plausible directions:
           </p>
         </div>
       </InfoCard>
@@ -885,22 +910,22 @@ function OutlookSection() {
                 Trump&apos;s extended deadline. Corridor must prove viable or power grid strikes resume.
               </p>
             </div>
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3">
+              <p className="text-xs text-green-400 font-semibold">IAEA Report ✓</p>
+              <p className="text-[11px] text-[var(--muted)]">
+                Preliminary Fordow assessment released Apr 8: radiation &ldquo;not catastrophic&rdquo; — 2km radius. Full report pending.
+              </p>
+            </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3">
-              <p className="text-xs text-yellow-400 font-semibold">IAEA Report</p>
+              <p className="text-xs text-yellow-400 font-semibold">Pakistan Talks — Ongoing</p>
               <p className="text-[11px] text-[var(--muted)]">
-                Assessment of Fordow radiation levels expected this week. Could escalate or de-escalate.
+                Islamabad talks resumed Apr 8. Iran deputy FM and US envoy met for 4 hours. Framework being drafted.
               </p>
             </div>
-            <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-3">
-              <p className="text-xs text-blue-400 font-semibold">Pakistan Talks</p>
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3">
+              <p className="text-xs text-green-400 font-semibold">China Convoy ✓</p>
               <p className="text-[11px] text-[var(--muted)]">
-                Islamabad hosting follow-up negotiations. Iran deputy FM and US envoy expected.
-              </p>
-            </div>
-            <div className="bg-orange-500/10 border border-orange-500/20 rounded-lg p-3">
-              <p className="text-xs text-orange-400 font-semibold">China Convoy</p>
-              <p className="text-[11px] text-[var(--muted)]">
-                Next PLA Navy-escorted tanker convoy scheduled. Any incident could reshape everything.
+                2nd PLA Navy convoy (5 tankers) transited safely Apr 8. China now a permanent Hormuz presence.
               </p>
             </div>
           </div>
@@ -919,34 +944,34 @@ function FlightsSection() {
       <InfoCard>
         <div className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
-              <p className="text-xs text-yellow-400 font-semibold uppercase">
-                Latest (Apr 7)
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+              <p className="text-xs text-green-400 font-semibold uppercase">
+                Latest (Apr 10)
               </p>
-              <p className="text-sm font-bold mt-1">First day with zero incoming fire</p>
-              <p className="text-xs text-[var(--muted)]">395 missiles, 2,050 drones intercepted total</p>
+              <p className="text-sm font-bold mt-1">3 days zero incoming fire</p>
+              <p className="text-xs text-[var(--muted)]">Corridor holding — cautious normalization underway</p>
             </div>
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
-              <p className="text-xs text-yellow-400 font-semibold uppercase">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+              <p className="text-xs text-green-400 font-semibold uppercase">
                 DXB Airport
               </p>
-              <p className="text-sm font-bold mt-1">Gradually resuming</p>
-              <p className="text-xs text-[var(--muted)]">Limited flights — corridor holding but fragile</p>
+              <p className="text-sm font-bold mt-1">Expanding operations</p>
+              <p className="text-xs text-[var(--muted)]">More flights resuming daily — still below pre-war levels</p>
             </div>
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
-              <p className="text-xs text-yellow-400 font-semibold uppercase">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+              <p className="text-xs text-green-400 font-semibold uppercase">
                 Emirates / Etihad
               </p>
-              <p className="text-sm font-bold mt-1">Expanded schedule</p>
-              <p className="text-xs text-[var(--muted)]">Adding flights cautiously — still limited</p>
+              <p className="text-sm font-bold mt-1">Increasing capacity</p>
+              <p className="text-xs text-[var(--muted)]">Adding routes daily — some long-haul resuming</p>
             </div>
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
-              <p className="text-xs text-yellow-400 font-semibold uppercase">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+              <p className="text-xs text-green-400 font-semibold uppercase">
                 UAE <TopicLink slug="airspace-closure">Airspace</TopicLink>
               </p>
-              <p className="text-sm font-bold mt-1">Open — monitoring</p>
+              <p className="text-sm font-bold mt-1">Open — 3rd day clear</p>
               <p className="text-xs text-[var(--muted)]">
-                First full day open since war began — subject to change
+                Continuously open since Day 39 — subject to change if corridor fails
               </p>
             </div>
           </div>
@@ -1044,27 +1069,27 @@ function MarketsSection() {
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-yellow-500/10 rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]"><TopicLink slug="oil-markets">Oil</TopicLink> (Brent)</p>
-              <p className="text-sm font-bold text-yellow-400">~$97 (peaked $119.50)</p>
-              <p className="text-xs text-[var(--muted)]">+39% since war began. Crashed on corridor news.</p>
+              <p className="text-sm font-bold text-yellow-400">~$89 (peaked $119.50)</p>
+              <p className="text-xs text-[var(--muted)]">+27% since war began. Below $90 for first time.</p>
             </div>
             <div className="bg-yellow-500/10 rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]"><TopicLink slug="strait-of-hormuz">Strait of Hormuz</TopicLink></p>
-              <p className="text-sm font-bold text-yellow-400">Humanitarian Corridor</p>
+              <p className="text-sm font-bold text-yellow-400">Corridor Expanding</p>
               <p className="text-xs text-[var(--muted)]">
-                15-20 vessels/day under Iranian inspection • Fragile
-              </p>
-            </div>
-            <div className="bg-red-500/10 rounded-lg p-3">
-              <p className="text-xs text-[var(--muted)]">Cyber War</p>
-              <p className="text-sm font-bold text-red-400">Active</p>
-              <p className="text-xs text-[var(--muted)]">
-                Iran&apos;s banks taken down by Israel/NSA. UAE banks hit in retaliation.
+                18-20 vessels/day under Iranian inspection • Expanding
               </p>
             </div>
             <div className="bg-yellow-500/10 rounded-lg p-3">
+              <p className="text-xs text-[var(--muted)]">Cyber War</p>
+              <p className="text-sm font-bold text-yellow-400">Cooling</p>
+              <p className="text-xs text-[var(--muted)]">
+                Iran banking ~60% restored. UAE banks fully back. No new attacks since Apr 6.
+              </p>
+            </div>
+            <div className="bg-green-500/10 rounded-lg p-3">
               <p className="text-xs text-[var(--muted)]">Banks</p>
-              <p className="text-sm font-bold text-yellow-400">Reopening</p>
-              <p className="text-xs text-[var(--muted)]">3-day closure ended. Some SWIFT delays remain.</p>
+              <p className="text-sm font-bold text-green-400">Operational</p>
+              <p className="text-xs text-[var(--muted)]">UAE fully restored. ATMs normal. Some Iran SWIFT delays.</p>
             </div>
           </div>
           <div className="bg-[var(--muted-bg)] rounded-lg p-4">
@@ -1527,7 +1552,7 @@ export default function Home() {
           <div className="flex items-center gap-2 mb-4">
             <StatusBadge status="red" label="Live Updates" />
             <span className="text-xs text-[var(--muted)]">
-              Apr 7, 2026 • 14:00 GMT+4
+              Apr 10, 2026 • 14:00 GMT+4
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
@@ -1607,7 +1632,7 @@ export default function Home() {
             UAE government guidance.
           </p>
           <p>
-            Last updated: April 7, 2026, 14:00 GMT+4
+            Last updated: April 10, 2026, 14:00 GMT+4
           </p>
           <p>
             Built with care for UAE residents. Stay safe. 🤍

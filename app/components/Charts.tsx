@@ -36,6 +36,9 @@ export function OilPriceChart() {
     { date: "Apr 5", price: 109, label: "$109", event: "Deadline eve diplomacy" },
     { date: "Apr 6", price: 98, label: "$98", event: "Corridor deal — oil crashes" },
     { date: "Apr 7", price: 97, label: "$97", event: "Corridor holding" },
+    { date: "Apr 8", price: 94, label: "$94", event: "IAEA report, talks resume" },
+    { date: "Apr 9", price: 92, label: "$92", event: "3 days zero UAE fire" },
+    { date: "Apr 10", price: 89, label: "$89", event: "Framework drafted, oil <$90" },
   ];
 
   const maxPrice = 125;
@@ -48,7 +51,7 @@ export function OilPriceChart() {
         <h3 className="text-sm font-bold uppercase tracking-wider">
           Brent Crude Oil ($/barrel)
         </h3>
-        <span className="text-xs text-yellow-400 font-mono">+39% since war began</span>
+        <span className="text-xs text-yellow-400 font-mono">+27% since war began</span>
       </div>
 
       {/* Chart area */}
@@ -101,8 +104,8 @@ export function OilPriceChart() {
       </div>
 
       <p className="text-[10px] text-[var(--muted)]">
-        Pre-war: ~$70/bbl. Peak: $119.50 intraday (Mar 9). Current: ~$97.
-        Crashed on Apr 6 corridor deal. Goldman Sachs: &ldquo;corridor fragile — triple-digit oil returns if it fails.&rdquo; 20% of global supply disrupted.
+        Pre-war: ~$70/bbl. Peak: $119.50 intraday (Mar 9). Current: ~$89 — below $90 for first time.
+        Framework principles drafted at Pakistan talks. Goldman Sachs: &ldquo;sub-$85 if April 13 produces deal.&rdquo; Supply disruption easing (~12%).
       </p>
     </div>
   );
@@ -111,15 +114,15 @@ export function OilPriceChart() {
 // ─── Global Stock Market Impact ─────────────────────────
 export function StockMarketImpact() {
   const markets = [
-    { name: "Nifty 50", country: "India", flag: "🇮🇳", change: -6.5, detail: "Recovering from -8% low. Corridor hopes lift sentiment.", color: "red" },
-    { name: "DFM", country: "UAE/Dubai", flag: "🇦🇪", change: -15, detail: "Recovering from -21% low. +8% on corridor day. Cyber attack hit banks.", color: "red" },
-    { name: "ADX", country: "UAE/Abu Dhabi", flag: "🇦🇪", change: -6, detail: "Energy weight limits losses. Recovering.", color: "red" },
-    { name: "Nikkei 225", country: "Japan", flag: "🇯🇵", change: -9, detail: "Oil import shock deepening. Yen weakening.", color: "red" },
-    { name: "KOSPI", country: "South Korea", flag: "🇰🇷", change: -7, detail: "Energy & supply chain fears persist", color: "red" },
-    { name: "S&P 500", country: "USA", flag: "🇺🇸", change: -4.5, detail: "Recovering from -7% low. +3.2% on corridor news.", color: "red" },
-    { name: "STOXX 600", country: "Europe", flag: "🇪🇺", change: -7, detail: "Energy crisis deepening despite corridor", color: "red" },
-    { name: "FTSE 100", country: "UK", flag: "🇬🇧", change: -4.8, detail: "Oil majors rallying on corridor uncertainty", color: "orange" },
-    { name: "ASX 200", country: "Australia", flag: "🇦🇺", change: -5.5, detail: "Commodity volatility. LNG prices surge.", color: "red" },
+    { name: "Nifty 50", country: "India", flag: "🇮🇳", change: -5.2, detail: "Recovering on corridor expansion and oil drop. Framework hopes lifting sentiment.", color: "red" },
+    { name: "DFM", country: "UAE/Dubai", flag: "🇦🇪", change: -11, detail: "Recovering from -21% low. +3.4% today on framework news. Banks fully restored.", color: "red" },
+    { name: "ADX", country: "UAE/Abu Dhabi", flag: "🇦🇪", change: -4.5, detail: "Energy weight limits losses. 4 days zero fire boosting confidence.", color: "red" },
+    { name: "Nikkei 225", country: "Japan", flag: "🇯🇵", change: -7, detail: "Recovering as oil drops below $90. Yen stabilizing.", color: "red" },
+    { name: "KOSPI", country: "South Korea", flag: "🇰🇷", change: -5.5, detail: "Energy fears easing on corridor expansion", color: "red" },
+    { name: "S&P 500", country: "USA", flag: "🇺🇸", change: -3.2, detail: "Recovering from -7% low. +1.2% today on framework news.", color: "red" },
+    { name: "STOXX 600", country: "Europe", flag: "🇪🇺", change: -5.5, detail: "Recovering as oil drops. Energy crisis easing.", color: "red" },
+    { name: "FTSE 100", country: "UK", flag: "🇬🇧", change: -3.5, detail: "Oil majors mixed — lower crude offsets recovery hopes", color: "orange" },
+    { name: "ASX 200", country: "Australia", flag: "🇦🇺", change: -4.2, detail: "Commodity volatility easing. LNG still elevated.", color: "red" },
   ];
 
   const maxDrop = 21;
@@ -167,29 +170,29 @@ export function CountriesAffected() {
       name: "Iran",
       flag: "🇮🇷",
       status: "red" as const,
-      casualties: "6,800+ killed (HRANA/WaPo)",
-      detail: "Fordow bunker-busted. Banking system collapsed by cyber attack. Corridor agreed but strikes continue.",
+      casualties: "7,200+ killed (HRANA/WaPo)",
+      detail: "Banking system ~70% restored. Framework principles drafted. Israel reduced to 1-2 strikes/day.",
     },
     {
       name: "UAE",
       flag: "🇦🇪",
       status: "yellow" as const,
       casualties: "12 killed, 185 injured",
-      detail: "395 missiles, 2,050 drones intercepted. First day zero fire (Apr 7). Banks hit by cyber attack.",
+      detail: "395 missiles, 2,050 drones intercepted. 4 days zero fire. Schools/malls reopening.",
     },
     {
       name: "Israel",
       flag: "🇮🇱",
       status: "red" as const,
       casualties: "34+ killed, 5,100+ injured",
-      detail: "12 killed in Tel Aviv (Day 35 barrage). Fordow bunker-busted. State TV HQ struck (22 journalists).",
+      detail: "Reduced strikes to 1-2/day on IRGC targets. Hezbollah conditional pause announced.",
     },
     {
       name: "Lebanon",
       flag: "🇱🇧",
       status: "red" as const,
-      casualties: "1,250+ killed, 3,800+ injured",
-      detail: "Israeli strikes on Hezbollah continue. 1.2M+ displaced. 145+ children killed.",
+      casualties: "1,290+ killed, 3,950+ injured",
+      detail: "Hezbollah announces conditional pause. 1.2M+ displaced. 160+ children killed.",
     },
     {
       name: "Qatar",
@@ -238,21 +241,21 @@ export function CountriesAffected() {
       flag: "🇯🇵",
       status: "yellow" as const,
       casualties: "Economic impact",
-      detail: "Nikkei -9%. Ship hit near Hormuz (Japanese-flagged). 30 days oil reserves released.",
+      detail: "Nikkei recovering (-7%). Ship hit near Hormuz (Japanese-flagged). 30 days oil reserves released.",
     },
     {
       name: "China",
       flag: "🇨🇳",
       status: "orange" as const,
       casualties: "Military intervention",
-      detail: "PLA Navy escorting tankers through Hormuz (Day 34). First direct military involvement.",
+      detail: "PLA Navy escorting tankers — 2 convoys transited safely. 3rd convoy scheduled Apr 11.",
     },
     {
       name: "Global",
       flag: "🌍",
       status: "yellow" as const,
-      casualties: "8,500+ killed total",
-      detail: "Oil ~$97 (down from $119 peak). Corridor open but fragile. Cyber war escalation.",
+      casualties: "8,800+ killed total",
+      detail: "Oil ~$89 (below $90 for first time). Framework principles drafted. Hezbollah conditional pause.",
     },
   ];
 
@@ -304,8 +307,8 @@ export function EconomicIndicators() {
     {
       label: "Brent Crude",
       before: "$70/bbl",
-      now: "~$97/bbl",
-      change: "+39%",
+      now: "~$89/bbl",
+      change: "+27%",
       direction: "up" as const,
       icon: "🛢️",
     },
@@ -328,32 +331,32 @@ export function EconomicIndicators() {
     {
       label: "S&P 500",
       before: "~5,950",
-      now: "~5,680",
-      change: "-4.5%",
+      now: "~5,760",
+      change: "-3.2%",
       direction: "down" as const,
       icon: "📉",
     },
     {
       label: "Nifty 50",
       before: "~23,100",
-      now: "~21,600",
-      change: "-6.5%",
+      now: "~21,900",
+      change: "-5.2%",
       direction: "down" as const,
       icon: "📉",
     },
     {
       label: "DFM (Dubai)",
       before: "~5,200",
-      now: "~4,420",
-      change: "-15%",
+      now: "~4,630",
+      change: "-11%",
       direction: "down" as const,
       icon: "📉",
     },
     {
       label: "Hormuz Shipping",
       before: "138 ships/day",
-      now: "~15 ships/day",
-      change: "-89%",
+      now: "~22 ships/day",
+      change: "-84%",
       direction: "down" as const,
       icon: "🚢",
     },
@@ -407,8 +410,8 @@ export function EconomicIndicators() {
         ))}
       </div>
       <p className="text-[10px] text-[var(--muted)]">
-        Data approximate as of Apr 7, 2026. Oil peaked at $119.50 (Mar 9), crashed to ~$97 on corridor deal (Apr 6).
-        Corridor fragile — Goldman Sachs: &ldquo;triple-digit oil returns within days if corridor fails.&rdquo; Cyber war now a major front.
+        Data approximate as of Apr 10, 2026. Oil peaked at $119.50 (Mar 9), now ~$89 — below $90 for first time.
+        Framework principles drafted at Pakistan talks. Goldman Sachs: &ldquo;sub-$85 if April 13 produces deal.&rdquo; De-escalation momentum building.
       </p>
     </div>
   );
@@ -452,6 +455,9 @@ export function ConflictIntensityChart() {
     { day: "D37", date: "Apr 5", missiles: 12, drones: 18, label: "Diplomacy" },
     { day: "D38", date: "Apr 6", missiles: 8, drones: 10, label: "Corridor deal" },
     { day: "D39", date: "Apr 7", missiles: 0, drones: 0, label: "Zero fire (UAE)" },
+    { day: "D40", date: "Apr 8", missiles: 0, drones: 0, label: "2nd day zero" },
+    { day: "D41", date: "Apr 9", missiles: 0, drones: 0, label: "3rd day zero" },
+    { day: "D42", date: "Apr 10", missiles: 0, drones: 0, label: "4th day zero" },
   ];
 
   return (
@@ -507,7 +513,7 @@ export function ConflictIntensityChart() {
 
       <p className="text-[10px] text-[var(--muted)]">
         Relative intensity (not absolute counts). Iran surged to 50+ on Day 35 (largest barrage at Israel).
-        Day 38 corridor deal led to sharp drop. Day 39: first zero-fire day for UAE. Strikes continue on Israel.
+        Day 38 corridor deal led to sharp drop. Days 39-42: four consecutive zero-fire days for UAE. Hezbollah conditional pause. Israel continues limited strikes on IRGC targets.
       </p>
     </div>
   );
@@ -548,6 +554,9 @@ export function UAEInterceptsChart() {
     { date: "Apr 5", day: "D37", missiles: 2, drones: 8, label: "Diplomacy" },
     { date: "Apr 6", day: "D38", missiles: 1, drones: 3, label: "Corridor deal" },
     { date: "Apr 7", day: "D39", missiles: 0, drones: 0, label: "Zero fire!" },
+    { date: "Apr 8", day: "D40", missiles: 0, drones: 0, label: "2nd day zero" },
+    { date: "Apr 9", day: "D41", missiles: 0, drones: 0, label: "3rd day zero" },
+    { date: "Apr 10", day: "D42", missiles: 0, drones: 0, label: "4th day zero" },
   ];
 
   const maxTotal = 250;
@@ -620,9 +629,9 @@ export function UAEInterceptsChart() {
       </div>
 
       <p className="text-[10px] text-[var(--muted)]">
-        Source: UAE Ministry of Defence. Totals as of Apr 7. 12 killed, 185 injured (31 nationalities).
-        Day 39: first day with zero incoming fire. Corridor deal (Apr 6) appears to be holding.
-        Intercept debris was a significant civilian hazard — Sharjah school hit Apr 1, 5 children injured.
+        Source: UAE Ministry of Defence. Totals as of Apr 10. 12 killed, 185 injured (31 nationalities).
+        Days 39-42: four consecutive days with zero incoming fire. Corridor at 20-22 vessels/day.
+        Schools and malls reopening. Framework principles drafted at Pakistan talks.
       </p>
     </div>
   );
@@ -654,6 +663,9 @@ export function HormuzShippingChart() {
     { date: "Apr 4", vessels: 10, label: "Cyber war" },
     { date: "Apr 6", vessels: 15, label: "Corridor deal!" },
     { date: "Apr 7", vessels: 15, label: "Holding" },
+    { date: "Apr 8", vessels: 18, label: "Expanding" },
+    { date: "Apr 9", vessels: 20, label: "3rd day clear" },
+    { date: "Apr 10", vessels: 22, label: "Framework drafted" },
   ];
 
   const maxVessels = 150;
@@ -664,7 +676,7 @@ export function HormuzShippingChart() {
         <h3 className="text-sm font-bold uppercase tracking-wider">
           Strait of Hormuz — Daily Vessel Transits
         </h3>
-        <span className="text-xs text-red-400 font-mono">-89%</span>
+        <span className="text-xs text-yellow-400 font-mono">-84%</span>
       </div>
 
       <div className="relative bg-[var(--muted-bg)] rounded-lg p-4 pt-6 pb-8 overflow-x-auto">
@@ -707,20 +719,20 @@ export function HormuzShippingChart() {
       <div className="grid grid-cols-2 gap-2">
         <div className="bg-yellow-500/10 rounded-lg p-3">
           <p className="text-xs text-[var(--muted)]">Current status</p>
-          <p className="text-sm font-bold text-yellow-400">Humanitarian corridor</p>
-          <p className="text-[10px] text-[var(--muted)]">15-20 vessels/day under Iranian inspection</p>
+          <p className="text-sm font-bold text-yellow-400">Corridor expanding</p>
+          <p className="text-[10px] text-[var(--muted)]">20-22 vessels/day under Iranian inspection</p>
         </div>
         <div className="bg-yellow-500/10 rounded-lg p-3">
           <p className="text-xs text-[var(--muted)]">China PLA Navy</p>
-          <p className="text-sm font-bold text-yellow-400">Escorting tankers</p>
-          <p className="text-[10px] text-[var(--muted)]">First direct Chinese military intervention</p>
+          <p className="text-sm font-bold text-yellow-400">2nd convoy transited</p>
+          <p className="text-[10px] text-[var(--muted)]">5 tankers escorted safely Apr 8 — permanent presence</p>
         </div>
       </div>
 
       <p className="text-[10px] text-[var(--muted)]">
-        Pre-war: ~138 vessels/day. Corridor deal (Apr 6) allows 15-20 inspected vessels/day — no military
-        cargo, no US/Israeli-flagged ships. China began escorting its own tankers (Apr 2). IRGC deputy
-        warns corridor &ldquo;can close in 60 seconds.&rdquo; Still -89% from normal traffic.
+        Pre-war: ~138 vessels/day. Corridor expanding — 20-22 vessels/day as of Apr 10, up from 15 on
+        opening day. Framework principles drafted at Pakistan talks. Still -84% from normal traffic
+        but trending upward. April 13 deadline 3 days away — framework could accelerate reopening.
       </p>
     </div>
   );
@@ -890,6 +902,8 @@ export function RegionalCasualtyChart() {
     { date: "Mar 31", day: "D32", iran: 6100, lebanon: 1180, israel: 24, uae: 12, us: 14, other: 110 },
     { date: "Apr 3", day: "D35", iran: 6500, lebanon: 1220, israel: 34, uae: 12, us: 14, other: 120 },
     { date: "Apr 7", day: "D39", iran: 6800, lebanon: 1250, israel: 34, uae: 12, us: 14, other: 130 },
+    { date: "Apr 9", day: "D41", iran: 7100, lebanon: 1280, israel: 34, uae: 12, us: 14, other: 135 },
+    { date: "Apr 10", day: "D42", iran: 7200, lebanon: 1290, israel: 34, uae: 12, us: 14, other: 140 },
   ];
 
   const maxTotal = 9000;
@@ -909,7 +923,7 @@ export function RegionalCasualtyChart() {
         <h3 className="text-sm font-bold uppercase tracking-wider">
           Regional Death Toll Over Time
         </h3>
-        <span className="text-xs text-red-400 font-mono">8,500+ total</span>
+        <span className="text-xs text-red-400 font-mono">8,800+ total</span>
       </div>
 
       <div className="flex flex-wrap gap-2 text-[10px]">
@@ -965,7 +979,7 @@ export function RegionalCasualtyChart() {
       </div>
 
       <p className="text-[10px] text-[var(--muted)]">
-        Iran accounts for ~80% of deaths. WaPo: ~4,500 civilians killed as of Apr 7. Lebanon: 1,250+ killed,
+        Iran accounts for ~80% of deaths. WaPo: ~4,900 civilians killed as of Apr 10. Lebanon: 1,290+ killed,
         3,800+ injured (145 children, 52 health workers). Israel: 34 killed (12 in Day 35 Tel Aviv barrage).
         ~500 children killed across region. Kuwait: 11 killed. Saudi: 4 killed. Bahrain: 3 killed.
       </p>
@@ -983,48 +997,49 @@ export function GlobalMarketsTimeline() {
     { label: "Week 4", date: "Mar 28" },
     { label: "Week 5", date: "Apr 4" },
     { label: "Week 6", date: "Apr 7" },
+    { label: "Week 6+", date: "Apr 10" },
   ];
 
   const markets = [
     {
       name: "S&P 500",
       flag: "🇺🇸",
-      values: [5950, 5740, 5690, 5590, 5520, 5480, 5680],
+      values: [5950, 5740, 5690, 5590, 5520, 5480, 5680, 5760],
       color: "bg-blue-400",
       lineColor: "text-blue-400",
     },
     {
       name: "DFM (Dubai)",
       flag: "🇦🇪",
-      values: [5200, 4700, 4300, 4100, 3950, 3800, 4420],
+      values: [5200, 4700, 4300, 4100, 3950, 3800, 4420, 4630],
       color: "bg-red-500",
       lineColor: "text-red-400",
     },
     {
       name: "Nifty 50",
       flag: "🇮🇳",
-      values: [23100, 22400, 21600, 21250, 20800, 20500, 21600],
+      values: [23100, 22400, 21600, 21250, 20800, 20500, 21600, 21900],
       color: "bg-orange-400",
       lineColor: "text-orange-400",
     },
     {
       name: "Nikkei 225",
       flag: "🇯🇵",
-      values: [38800, 37500, 36200, 34500, 33800, 33200, 35300],
+      values: [38800, 37500, 36200, 34500, 33800, 33200, 35300, 36100],
       color: "bg-purple-400",
       lineColor: "text-purple-400",
     },
     {
       name: "STOXX 600",
       flag: "🇪🇺",
-      values: [560, 540, 530, 526, 518, 510, 521],
+      values: [560, 540, 530, 526, 518, 510, 521, 529],
       color: "bg-green-400",
       lineColor: "text-green-400",
     },
     {
       name: "KOSPI",
       flag: "🇰🇷",
-      values: [2650, 2550, 2480, 2490, 2430, 2380, 2465],
+      values: [2650, 2550, 2480, 2490, 2430, 2380, 2465, 2505],
       color: "bg-cyan-400",
       lineColor: "text-cyan-400",
     },
@@ -1036,7 +1051,7 @@ export function GlobalMarketsTimeline() {
         <h3 className="text-sm font-bold uppercase tracking-wider">
           Global Markets Since War Began
         </h3>
-        <span className="text-xs text-red-400 font-mono">Feb 28 → Apr 7</span>
+        <span className="text-xs text-red-400 font-mono">Feb 28 → Apr 10</span>
       </div>
 
       <div className="space-y-2">
@@ -1086,9 +1101,9 @@ export function GlobalMarketsTimeline() {
       <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3">
         <p className="text-[11px]">
           <strong>Key pattern:</strong> Corridor deal (Apr 6) triggered sharp rally across all markets.
-          DFM surged +8% on corridor day, recovering from -21% low. US markets (-4.5%) outperforming.
-          Asia still hardest hit (Nikkei -9%). Corridor fragility keeping gains capped.
-          Cyber war on banking systems adding new uncertainty layer.
+          DFM recovering strongly from -21% low (+3.4% on framework news). US markets (-3.2%) outperforming.
+          Asia recovering (Nikkei -7%). Oil below $90 boosting sentiment. Framework principles
+          drafted at Pakistan talks — April 13 deadline could accelerate gains if deal materializes.
         </p>
       </div>
     </div>
@@ -1160,12 +1175,12 @@ export function HistoricalCrisisComparison() {
       trigger: "US-Israel strike Iran, Hormuz corridor",
       oilBefore: "$70",
       oilPeak: "$119",
-      oilChange: "+39% (corridor open)",
-      spDrop: "-4.5% (recovering)",
+      oilChange: "+27% (framework drafted)",
+      spDrop: "-3.2% (recovering)",
       recoveryTime: "TBD",
-      duration: "39 days (ongoing)",
+      duration: "42 days (ongoing)",
       hormuz: "CORRIDOR",
-      supplyLost: "~15% (was 20%)",
+      supplyLost: "~12% (was 20%)",
       color: "red" as const,
     },
   ];
